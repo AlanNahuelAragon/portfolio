@@ -7,9 +7,9 @@ export default defineConfig({
     react(),
     replace({
       'process.env.EMAILJS_SERVICE': JSON.stringify(process.env.EMAILJS_SERVICE),
-      'process.env.EMAILJS_TEMPLATE': JSON.stringify(process.env.EMAILJS_TEMPLATE),
-      'process.env.EMAILJS_OPTIONS': JSON.stringify(process.env.EMAILJS_OPTIONS),
-      'process.env.CONTACT_EMAIL': JSON.stringify(process.env.CONTACT_EMAIL),
+      'process.env.EMAILJS_TEMPLATE_ID': JSON.stringify(process.env.EMAILJS_TEMPLATE_ID),
+      'process.env.EMAILJS_PUBLIC_KEY': JSON.stringify(process.env.EMAILJS_PUBLIC_KEY),
+      'process.env.CONTACT_EMAIL_ID': JSON.stringify(process.env.CONTACT_EMAIL_ID),
     })
   ],
   base:'https://alannahuelaragon.github.io/portfolio'

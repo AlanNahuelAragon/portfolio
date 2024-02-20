@@ -9,6 +9,9 @@ import { contactSchema } from "./Validations/ContactValidation";
 
 export const Contact = () => {
 
+  const PUBLIC_KEY= process.env.EMAILJS_PUBLIC_KEY;
+  const TEMPLATE_ID= process.env.EMAILJS_TEMPLATE_ID;
+  const SERVICE_ID= process.env.EMAILJS_SERVICE_ID;
   const formInitialDetails = {
     user_name: '',
     user_email: '',
@@ -47,7 +50,7 @@ export const Contact = () => {
     event.preventDefault();
     setButtonText("Sending...");
     console.log(event.target)
-    emailjs.sendForm(`${process.env.EMAILJS_SERVICE}`, `${process.env.EMAILJS_TEMPLATE}`, event.target, `${process.env.EMAILJS_OPTIONS}`)
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, event.target, PUBLIC_KEY)
       .then(response => {
         if (response.status === 200) {
           setTimeout(() => {
