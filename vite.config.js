@@ -11,5 +11,6 @@ export default defineConfig({
       'process.env.EMAILJS_OPTIONS': JSON.stringify(process.env.EMAILJS_OPTIONS),
       'process.env.CONTACT_EMAIL': JSON.stringify(process.env.CONTACT_EMAIL),
     })
-  ]
+  ],
+  base:'https://alannahuelaragon.github.io/portfolio'
 });
