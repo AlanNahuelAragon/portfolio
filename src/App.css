@@ -373,6 +373,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
 }
+@media (max-width:575px) {
+  .about .nav.nav-pills{
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 50px;
+    background-color: rgb(255 255 255 / 10%);
+    overflow: hidden;
+  }
+}
 .about .nav.nav-pills .nav-item {
   width: 33.33333%;
 }
@@ -463,6 +472,31 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 15px;
   letter-spacing: 0.8px;
 }
+.proj-links{
+  color: black;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.proj-btn{
+  height: 35px;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid white;
+  margin: 5px;
+  padding-top: 5px;
+}
+.proj-btn:hover{
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid white;
+  background-color: rgb(255, 255, 255);
+}
+
 
 /********* Certificates CSS **********/
 .cert-imgbx {

@@ -4,10 +4,11 @@ import { CertificatesCard } from "./CertificatesCard";
 import { ExperienceCard } from "./ExperienceCard";
 import projImg1 from "../assets/img/projects/project-img1.png";
 import projImg2 from "../assets/img/projects/project-img2.png";
-import projImg3 from "../assets/img/projects/project-img3.png";
+//import projImg3 from "../assets/img/projects/project-img3.png";
 import projDlfarm from "../assets/img/projects/project-dlfarmer.png";
 import projGencer from "../assets/img/projects/project-gencer.png";
 import projProte from "../assets/img/projects/project-protector.png";
+import projWeather from "../assets/img/projects/project-weather.png"
 
 import jscert from "../assets/img/certificates/jsmaster-cert.png"
 import netcert from "../assets/img/certificates/dotnet-cert.png"
@@ -26,34 +27,46 @@ import TrackVisibility from 'react-on-screen';
 export const About = () => {
     const projects = [
         {
+            title: "Weather Widget",
+            description: "Weather with API integration",
+            imgUrl: projWeather,
+            gitUrl:"https://github.com/AlanNahuelAragon/weather-widget",
+            projUrl:"https://alannahuelaragon.github.io/weather-widget/"
+        },
+        {
             title: "Duel Links Farmer",
             description: "Image recognition project",
             imgUrl: projDlfarm,
+            gitUrl:"https://github.com/AlanNahuelAragon/DLBot",
+            projUrl:""
         },
         {
             title: "City Protector",
             description: "Unity game for Mobile",
             imgUrl: projProte,
+            gitUrl:"",
+            projUrl:"https://voidseye.itch.io/city-protector"
         },
         {
             title: "Gencer",
-            description: "Unity game for PC",
+            description: "PC game made with Unity at Global Game Jam event",
             imgUrl: projGencer,
+            gitUrl:"",
+            projUrl:""
         },
         {
             title: "Not available",
             description: "On development",
             imgUrl: projImg1,
-        },
-        {
-            title: "Not available",
-            description: "On development",
-            imgUrl: projImg2,
+            gitUrl:"",
+            projUrl:""
         },
         {
             title: "Not available",
             description: "Coming soon",
-            imgUrl: projImg3,
+            imgUrl: projImg2,
+            gitUrl:"",
+            projUrl:""
         },
     ]
     const experiece = [
@@ -97,82 +110,82 @@ export const About = () => {
       },
   ]
     return (
-        <section className="about" id="about">
-      <Container>
-        <Row>
-          <Col size={12}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>About me</h2>
-                <p>Full Stack Developer with 4 years of experience working for
-                  Software Factories in the area of applications and web development.
-                  My goal is to offer my knowledge, increase my seniority,
-                  learn new languages and optimize my code day by day.
-                </p>
-                <Tab.Container id="about-tabs" defaultActiveKey="first">
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">Projects</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="second">Experience</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="third">Certifications</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                    <Tab.Pane eventKey="first">
-                      <Row>
-                        {
-                          projects.map((project, index) => {
-                            return (
-                              <ProjectCard
-                                key={index}
-                                {...project}
-                                />
-                            )
-                          })
-                        }
-                      </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="second">
-                      <Col>
+      <section className="about" id="about">
+        <Container>
+          <Row>
+            <Col size={12}>
+              <TrackVisibility>
+                {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
+                  <h2>About me</h2>
+                  <p>Full Stack Developer with 4 years of experience working for
+                    Software Factories in the area of applications and web development.
+                    My goal is to offer my knowledge, increase my seniority,
+                    learn new languages and optimize my code day by day.
+                  </p>
+                  <Tab.Container id="about-tabs" defaultActiveKey="first">
+                    <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                      <Nav.Item>
+                        <Nav.Link eventKey="first">Projects</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="second">Experience</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="third">Certifications</Nav.Link>
+                      </Nav.Item>
+                    </Nav>
+                    <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                      <Tab.Pane eventKey="first">
+                        <Row>
                           {
-                            experiece.map((experiece, index) => {
+                            projects.map((project, index) => {
                               return (
-                                <ExperienceCard
+                                <ProjectCard
                                   key={index}
-                                  {...experiece}
+                                  {...project}
                                   />
                               )
                             })
                           }
-                        </Col>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <Row>
-                        {
-                          certificates.map((certificates, index) => {
-                            return (
-                              <CertificatesCard
-                                key={index}
-                                {...certificates}
-                                />
-                            )
-                          })
-                        }
-                      </Row>
-                    </Tab.Pane>
-                  </Tab.Content>
-                </Tab.Container>
-              </div>}
-            </TrackVisibility>
-          </Col>
-        </Row>
-      </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+                        </Row>
+                      </Tab.Pane>
+                      <Tab.Pane eventKey="second">
+                        <Col>
+                            {
+                              experiece.map((experiece, index) => {
+                                return (
+                                  <ExperienceCard
+                                    key={index}
+                                    {...experiece}
+                                    />
+                                )
+                              })
+                            }
+                          </Col>
+                      </Tab.Pane>
+                      <Tab.Pane eventKey="third">
+                        <Row>
+                          {
+                            certificates.map((certificates, index) => {
+                              return (
+                                <CertificatesCard
+                                  key={index}
+                                  {...certificates}
+                                  />
+                              )
+                            })
+                          }
+                        </Row>
+                      </Tab.Pane>
+                    </Tab.Content>
+                  </Tab.Container>
+                </div>}
+              </TrackVisibility>
+            </Col>
+          </Row>
+        </Container>
+        <img className="background-image-right" src={colorSharp2}></img>
     </section>
     )
 }
