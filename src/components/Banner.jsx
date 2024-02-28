@@ -66,6 +66,8 @@ export const Banner = () => {
                 </h1>
                   <p>"Since my first project at Global Game Jam in 2019, I have followed my path as a programmer until now , acquiring the necessary knowledge to become a Full Stack developer."</p>
                   <button onClick={() => goToSection()}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <a className="banner-repo"href="https://github.com/AlanNahuelAragon/portfolio/"
+                  >{`<>Repo for this project`}</a>
               </div>}
             </TrackVisibility>
           </Col>

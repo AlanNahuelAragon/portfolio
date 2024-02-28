@@ -19,7 +19,7 @@ export const Footer = () => {
               <a href="#" onClick={() => { window.open(`mailto:${import.meta.env.VITE_CONTACT_EMAIL}`) }}><img src={navGmail} alt="Gmail" /></a>
               <a href="https://github.com/AlanNahuelAragon"><img src={navGit} alt="Github" /></a>
             </div>
-            <p>Copyright 2022. All Rights Reserved</p>
+            <p>Copyright 2023. All Rights Reserved</p>
           </Col>
         </Row>
       </Container>
