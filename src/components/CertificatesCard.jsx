@@ -2,7 +2,7 @@ import { Col } from "react-bootstrap";
 
 export const CertificatesCard = ({ title, institute, imgUrl ,link}) => {
   return (
-    <Col size={12} sm={6} md={4}>
+    <Col size={12} sm={6} md={6} lg={3}>
     <p>{institute}</p>
       <div className="cert-imgbx">
         <img src={imgUrl} />

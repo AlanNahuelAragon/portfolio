@@ -488,7 +488,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: black;
   display: flex;
   flex-direction: column;
-  margin: 5px;
+  margin: auto;
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -498,7 +498,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-decoration: none;
   border-radius: 50px;
   border: 1px solid white;
-  margin: 5px;
+  margin: 3px;
   padding-top: 5px;
 }
 .proj-btn:hover{

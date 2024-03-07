@@ -3,16 +3,18 @@ import { ProjectCard } from "./ProjectCard";
 import { CertificatesCard } from "./CertificatesCard";
 import { ExperienceCard } from "./ExperienceCard";
 import projImg1 from "../assets/img/projects/project-img1.png";
-import projImg2 from "../assets/img/projects/project-img2.png";
+//import projImg2 from "../assets/img/projects/project-img2.png";
 //import projImg3 from "../assets/img/projects/project-img3.png";
 import projDlfarm from "../assets/img/projects/project-dlfarmer.png";
 import projGencer from "../assets/img/projects/project-gencer.png";
 import projProte from "../assets/img/projects/project-protector.png";
 import projWeather from "../assets/img/projects/project-weather.png"
+import projBoxing from "../assets/img/projects/project-boxing.png"
 
-import jscert from "../assets/img/certificates/jsmaster-cert.png"
+import jsmcert from "../assets/img/certificates/jsmaster-cert.png"
 import netcert from "../assets/img/certificates/dotnet-cert.png"
 import gdcert from "../assets/img/certificates/gamedev-cert.png"
+import jscert from "../assets/img/certificates/javascript-cert.png"
 
 import bp4Logo from "../assets/img/experience/bp4-logo.png"
 import acnLogo from "../assets/img/experience/acn-logo.png"
@@ -26,12 +28,19 @@ import TrackVisibility from 'react-on-screen';
 
 export const About = () => {
     const projects = [
+          {
+            title: "Boxing-Js",
+            description: "A browser game made with javascript",
+            imgUrl: projBoxing,
+            gitUrl:"https://github.com/AlanNahuelAragon/boxing-js",
+            projUrl:"https://alannahuelaragon.github.io/boxing-js"
+        },
         {
             title: "Weather Widget",
             description: "Weather with API integration",
             imgUrl: projWeather,
             gitUrl:"https://github.com/AlanNahuelAragon/weather-widget",
-            projUrl:"https://alannahuelaragon.github.io/weather-widget/"
+            projUrl:"https://alannahuelaragon.github.io/weather-widget"
         },
         {
             title: "Duel Links Farmer",
@@ -60,14 +69,7 @@ export const About = () => {
             imgUrl: projImg1,
             gitUrl:"",
             projUrl:""
-        },
-        {
-            title: "Not available",
-            description: "Coming soon",
-            imgUrl: projImg2,
-            gitUrl:"",
-            projUrl:""
-        },
+        }
     ]
     const experiece = [
       {
@@ -91,9 +93,15 @@ export const About = () => {
   ]
     const certificates = [
       {
+        title: "Javascript Essential",
+        institute: "LinkedIn",
+        imgUrl: jscert,
+        link:"https://www.linkedin.com/learning/certificates/8e26a58b817f915a750be7c13f551edd8c37dfa7f8fa8970c0fd25a66782144f?trk=share_certificate",
+      },
+      {
           title: "Master in Javascript Frameworks",
           institute: "Udemy",
-          imgUrl: jscert,
+          imgUrl: jsmcert,
           link:"https://www.udemy.com/certificate/UC-4a2d4074-8804-4b62-8fd0-7491bc547e06/",
       },
       {
