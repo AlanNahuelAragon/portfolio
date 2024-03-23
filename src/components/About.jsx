@@ -124,7 +124,7 @@ export const About = () => {
       imgUrl: gdcert,
       link: "https://drive.google.com/file/d/1GNfUotP-sP_woDvrYTBGOFBfEpgYRc9N/view?usp=sharing",
     },
-  ]
+  ] 
   return (
     <section className="about" id="about">
       <Container>
